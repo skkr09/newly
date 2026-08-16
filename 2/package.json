@@ -1,0 +1,11 @@
+{
+  "name": "tradeangel8",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve . -l $PORT -s"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

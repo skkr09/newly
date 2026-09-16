@@ -1,0 +1,24 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#101828}
+.header{height:88px;background:#101a30;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 22px;box-shadow:0 3px 15px #0002}
+.brand{font-size:21px;display:flex;gap:10px;align-items:baseline}.brand span{font-size:13px;color:#aeb8cc;font-weight:700}
+.menu{width:58px;height:58px;border:0;border-radius:17px;background:#1b2942;padding:14px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.menu i{height:4px;background:#fff;border-radius:8px;width:100%}
+main{max-width:680px;margin:auto;padding:34px 18px 0}
+.poster-card{position:relative;border-radius:32px;overflow:hidden;background:#160000;box-shadow:0 18px 35px #1112;min-height:480px}
+.poster{display:block;width:100%;height:100%;min-height:480px;object-fit:cover;pointer-events:none;user-select:none}
+.poster-cta{position:absolute;left:18px;right:18px;bottom:20px}
+.wa-btn{height:82px;width:100%;border-radius:999px;background:linear-gradient(135deg,#24df72,#079f7d);color:white;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:13px;font-size:22px;font-weight:900;letter-spacing:.2px;box-shadow:0 10px 30px #00c96a66}
+.wa-btn strong{font-size:29px}.wa-icon,.wa-bubble{width:31px;height:31px;border-radius:50%;background:#fff;color:#12ad69;display:grid;place-items:center;font-size:14px}
+.intro{margin:38px 0 20px;padding:36px 28px 42px;border-radius:38px;background:linear-gradient(135deg,#f5f7ff,#fff);text-align:center;box-shadow:0 12px 35px #14213d0b}
+.intro h1{font-size:34px;line-height:1.25;margin:0 0 28px}.intro h1 em{font-style:normal;color:#19c96c}.intro p{font-size:21px;line-height:1.55;color:#536174;margin:5px 0}
+.sticky-space{height:105px}
+.sticky-wa{position:fixed;z-index:50;left:0;right:0;bottom:0;min-height:88px;padding:15px max(20px,env(safe-area-inset-right)) calc(15px + env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left));background:linear-gradient(110deg,#20db70,#087f71);color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:14px;font-size:21px;box-shadow:0 -6px 24px #0002}
+.sticky-wa strong{font-size:30px}.sticky-wa .wa-bubble{flex:0 0 31px}
+@media(max-width:480px){
+ .header{height:82px}.brand{font-size:19px}
+ main{padding:28px 15px 0}.poster-card,.poster{min-height:450px}
+ .poster-cta{left:14px;right:14px;bottom:16px}
+ .wa-btn{height:78px;font-size:20px}
+ .intro{padding:32px 22px}.intro h1{font-size:29px}.intro p{font-size:18px}
+ .sticky-wa{font-size:18px;min-height:82px;gap:10px}
+}

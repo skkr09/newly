@@ -1,202 +1,1434 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dafabet | Landing Page</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ANNA REDDY - India's #1 Cricket Prediction & Match Analytics</title>
+    <meta name="description"
+        content="Join Anna Reddy Official Telegram for 98.5% accurate cricket match winner, toss predictions, live session & lambi calls, pitch analysis, and 100% free daily tips.">
+    <meta name="theme-color" content="#03070d">
 
-    body {
-      background: #000;
-      color: #fff;
-      line-height: 1.6;
-    }
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ANNA REDDY - India's #1 Cricket Prediction">
+    <meta property="og:description"
+        content="Match Winner, Toss Prediction, Live Session & Betting Tips. 98.5% Accuracy, 100K+ Members, 100% Free Daily Tips.">
+    <meta property="og:image" content="anna-reddy-logo.png">
 
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #000;
-    }
-li{max-width: 500px;margin: 0 auto;color: #ccc;}
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="anna-reddy-logo.png">
 
-    /* Top Image Section */
-    .hero img {
-      width: 100%;
-      display: block;
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    /* CTA Section */
-    .cta {
-      padding: 20px;
-      text-align: center;
-    }
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        // fbq('init', 'YOUR_PIXEL_ID');
+        // fbq('track', 'PageView');
+    </script>
 
-    .cta button {
-      background: #25d366;
-      color: #fff;
-      border: none;
-      padding: 14px 24px;
-      font-size: 16px;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+    <style>
+        /* ==========================================================================
+           DESIGN TOKENS & SYSTEM
+           ========================================================================== */
+        :root {
+            --bg-deep: #03070d;
+            --bg-grid-line: rgba(0, 210, 255, 0.045);
+            --bg-grid-glow: rgba(0, 180, 216, 0.08);
 
-    .cta button:hover {
-      opacity: 0.9;
-    }
+            /* Card Styling */
+            --card-bg-start: #0c1b29;
+            --card-bg-mid: #081420;
+            --card-bg-end: #040a12;
+            --card-border: rgba(0, 212, 255, 0.28);
+            --card-border-glow: rgba(0, 212, 255, 0.45);
+            --card-glow-outer: rgba(0, 195, 255, 0.18);
 
-    /* Content Section */
-    .content {
-      padding: 24px 20px 40px;
-    }
+            /* Gold & Yellow Accents */
+            --gold-bright: #ffea79;
+            --gold-main: #f5b300;
+            --gold-warm: #e59e00;
+            --gold-glow: rgba(245, 179, 0, 0.45);
+            --badge-border: rgba(245, 179, 0, 0.55);
+            --badge-bg: rgba(24, 28, 16, 0.75);
 
-    .content h2 {
-      font-size: 30px;
-      margin-bottom: 12px;
-      text-align: center;
-    }
+            /* Official Telegram Blue Colors */
+            --tg-blue-light: #2AABEE;
+            --tg-blue-main: #229ED9;
+            --tg-blue-dark: #1789C9;
+            --tg-glow: rgba(34, 158, 217, 0.65);
 
-    .content p {
-      font-size: 16px;
-      margin-bottom: 14px;
-      color: #ccc;
-    }
+            /* Feature Card Colors */
+            --subcard-bg: rgba(9, 24, 38, 0.65);
+            --subcard-border: rgba(0, 212, 255, 0.14);
+            --subcard-hover-border: rgba(0, 212, 255, 0.35);
 
-    /* Footer Buttons */
-    .links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      padding: 20px;
-    }
+            /* Orange / Fire Gradient */
+            --orange-start: #ff9d00;
+            --orange-mid: #ff6a00;
+            --orange-end: #e63900;
+            --orange-glow: rgba(255, 106, 0, 0.5);
 
-    .links a {
-      text-decoration: none;
-      background: #1a1a1a;
-      color: #fff;
-      padding: 12px;
-      text-align: center;
-      border-radius: 8px;
-      font-size: 14px;
-    }
+            /* Typography */
+            --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
 
-    .links a:hover {
-      background: #2a2a2a;
-    }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-    footer {
-      padding: 16px;
-      text-align: center;
-      font-size: 12px;
-      color: #777;
-    }
-  </style>
+        html {
+            scroll-behavior: smooth;
+        }
 
+        body {
+            background-color: var(--bg-deep);
+            color: #ffffff;
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            overflow-x: hidden;
+            padding: 24px 14px 40px;
+            line-height: 1.45;
+        }
 
-<script src="../tracking.js"></script>
+        /* Ambient Dark Grid Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(to right, var(--bg-grid-line) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--bg-grid-line) 1px, transparent 1px);
+            background-size: 36px 36px;
+            background-position: center center;
+            pointer-events: none;
+            z-index: 0;
+        }
 
+        /* Ambient Glow Blobs */
+        .ambient-glow-top {
+            position: fixed;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 580px;
+            height: 580px;
+            background: radial-gradient(circle, rgba(34, 158, 217, 0.15) 0%, rgba(245, 179, 0, 0.08) 40%, transparent 70%);
+            filter: blur(60px);
+            pointer-events: none;
+            z-index: 0;
+        }
 
+        .ambient-glow-center {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -10%);
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(34, 158, 217, 0.18) 0%, rgba(0, 100, 200, 0.08) 50%, transparent 75%);
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+        }
 
+        /* ==========================================================================
+           MAIN CONTAINER & CARD
+           ========================================================================== */
+        .page-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 520px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-card {
+            width: 100%;
+            background: linear-gradient(180deg, var(--card-bg-start) 0%, var(--card-bg-mid) 45%, var(--card-bg-end) 100%);
+            border: 1.5px solid var(--card-border);
+            border-radius: 30px;
+            padding: 28px 22px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow:
+                0 0 50px var(--card-glow-outer),
+                0 25px 60px rgba(0, 0, 0, 0.85),
+                inset 0 1px 1px rgba(255, 255, 255, 0.12);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        /* Subtle Corner Glow inside Card */
+        .main-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: radial-gradient(circle at 50% 0%, rgba(34, 158, 217, 0.16) 0%, transparent 70%);
+            pointer-events: none;
+            border-radius: 30px 30px 0 0;
+        }
+
+        /* ==========================================================================
+           TOP VERIFIED PILL
+           ========================================================================== */
+        .top-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--badge-bg);
+            border: 1px solid var(--badge-border);
+            border-radius: 50px;
+            padding: 6px 16px;
+            margin-bottom: 22px;
+            box-shadow: 0 0 16px rgba(245, 179, 0, 0.2), inset 0 1px 0 rgba(255, 235, 130, 0.2);
+            animation: badgeFloat 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes badgeFloat {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-2px);
+            }
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            background-color: var(--gold-bright);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--gold-bright);
+            animation: pulseDot 2s infinite;
+        }
+
+        .badge-text {
+            font-family: var(--font-heading);
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 0.9px;
+            color: #ffde59;
+            text-transform: uppercase;
+        }
+
+        .badge-check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffde59;
+        }
+
+        .badge-check svg {
+            width: 14px;
+            height: 14px;
+            fill: #ffde59;
+        }
+
+        /* ==========================================================================
+           LOGO BADGE (LION MEDALLION)
+           ========================================================================== */
+        .logo-container {
+            position: relative;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-glow-halo {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(34, 158, 217, 0.45) 0%, rgba(245, 179, 0, 0.3) 45%, transparent 70%);
+            filter: blur(14px);
+            z-index: 0;
+            animation: auraPulse 3.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes auraPulse {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        .logo-img-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 124px;
+            height: 124px;
+            border-radius: 50%;
+            border: 2px solid #f5b300;
+            box-shadow:
+                0 0 25px rgba(245, 179, 0, 0.5),
+                0 0 12px rgba(255, 215, 0, 0.35);
+        }
+
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            background-color: #03070d;
+        }
+
+        /* ==========================================================================
+           TITLE & SUBTITLE (WHITE, ORANGE & YELLOW GRADIENT)
+           ========================================================================== */
+        .brand-title {
+            font-family: var(--font-heading);
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            /* White, Yellow and Orange Gradient Blend */
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFF176 28%, #FFB300 58%, #FF6F00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 18px rgba(255, 179, 0, 0.45)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+            margin-bottom: 8px;
+            line-height: 1.1;
+        }
+
+        .brand-tagline {
+            font-family: var(--font-heading);
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #f1f5f9;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .tagline-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .bolt-icon {
+            color: #ffd700;
+            font-size: 14px;
+            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.8));
+        }
+
+        .bullet-dot {
+            color: #f5b300;
+            font-size: 12px;
+            margin: 0 1px;
+        }
+
+        /* ==========================================================================
+           LIVE STATUS PILL
+           ========================================================================== */
+        .live-status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(12, 24, 38, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50px;
+            padding: 6px 16px;
+            margin-bottom: 22px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .live-red-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ef4444;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #ef4444;
+            position: relative;
+        }
+
+        .live-red-dot::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 50%;
+            background-color: rgba(239, 68, 68, 0.4);
+            animation: pingPulse 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes pingPulse {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.9;
+            }
+
+            80%,
+            100% {
+                transform: scale(2.2);
+                opacity: 0;
+            }
+        }
+
+        .live-status-text {
+            font-family: var(--font-heading);
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            color: #cbd5e1;
+            text-transform: uppercase;
+        }
+
+        /* ==========================================================================
+           HERO CTA BUTTON (ORIGINAL TELEGRAM BLUE COLOR & CENTERED CONTENT)
+           ========================================================================== */
+        .btn-cta-wrapper {
+            width: 100%;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .btn-telegram {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 22px;
+            /* Official Telegram Blue Gradient */
+            background: linear-gradient(135deg, var(--tg-blue-light) 0%, var(--tg-blue-main) 50%, var(--tg-blue-dark) 100%);
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 17.5px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            white-space: nowrap;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.35);
+            box-shadow:
+                0 0 30px var(--tg-glow),
+                0 8px 24px rgba(23, 137, 201, 0.5),
+                inset 0 2px 3px rgba(255, 255, 255, 0.55),
+                inset 0 -2px 3px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            animation: ctaGlowPulse 2.8s infinite alternate ease-in-out;
+        }
+
+        @keyframes ctaGlowPulse {
+            0% {
+                box-shadow: 0 0 22px rgba(34, 158, 217, 0.5), 0 6px 20px rgba(23, 137, 201, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.5);
+            }
+
+            100% {
+                box-shadow: 0 0 42px rgba(42, 171, 238, 0.85), 0 10px 30px rgba(34, 158, 217, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        /* Button Light Sweep Effect */
+        .btn-telegram::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 40%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transform: rotate(25deg);
+            animation: lightSweep 3.5s infinite ease-in-out;
+        }
+
+        @keyframes lightSweep {
+            0% {
+                left: -60%;
+            }
+
+            35%,
+            100% {
+                left: 140%;
+            }
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-3px) scale(1.015);
+            box-shadow: 0 0 45px rgba(42, 171, 238, 0.95), 0 12px 32px rgba(23, 137, 201, 0.75), inset 0 2px 5px rgba(255, 255, 255, 0.75);
+        }
+
+        .btn-telegram:active {
+            transform: translateY(1px) scale(0.985);
+        }
+
+        .tg-icon-circle {
+            width: 32px;
+            height: 32px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        .tg-icon-circle img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .tg-icon-circle svg {
+            width: 17px;
+            height: 17px;
+            fill: #229ED9;
+            margin-right: 1px;
+        }
+
+        .btn-text {
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+            white-space: nowrap;
+        }
+
+        /* ==========================================================================
+           STATS ROW (98.5% ACCURACY | 100K+ MEMBERS | 100% FREE TIPS)
+           ========================================================================== */
+        .stats-card {
+            width: 100%;
+            background: rgba(8, 20, 32, 0.75);
+            border: 1px solid rgba(0, 212, 255, 0.16);
+            border-radius: 16px;
+            padding: 14px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 18px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 15%;
+            height: 70%;
+            width: 1px;
+            background: rgba(0, 212, 255, 0.16);
+        }
+
+        .stat-value {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 900;
+            color: #38bdf8;
+            letter-spacing: -0.2px;
+            line-height: 1.1;
+            margin-bottom: 3px;
+        }
+
+        .stat-label {
+            font-family: var(--font-heading);
+            font-size: 10.5px;
+            font-weight: 800;
+            color: #94a3b8;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        /* ==========================================================================
+           FEATURE CARDS GRID (2x2)
+           ========================================================================== */
+        .features-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card {
+            background: var(--subcard-bg);
+            border: 1px solid var(--subcard-border);
+            border-radius: 14px;
+            padding: 12px 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            text-align: left;
+            transition: all 0.25s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--subcard-hover-border);
+            transform: translateY(-2px);
+            background: rgba(12, 30, 48, 0.85);
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.12);
+        }
+
+        .feat-icon-box {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(4, 15, 25, 0.8);
+            border: 1px solid rgba(245, 179, 0, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .feat-icon-box svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .feat-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .feat-title {
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 2px;
+            line-height: 1.2;
+        }
+
+        .feat-desc {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 500;
+            line-height: 1.25;
+        }
+
+        /* Specific Icon Colors */
+        .icon-trophy {
+            color: #facc15;
+        }
+
+        .icon-bolt {
+            color: #4ade80;
+        }
+
+        .icon-target {
+            color: #38bdf8;
+        }
+
+        .icon-analysis {
+            color: #facc15;
+        }
+
+        /* ==========================================================================
+           TRUST / BENEFIT PILLS
+           ========================================================================== */
+        .trust-badges-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .trust-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #f1f5f9;
+        }
+
+        .trust-check-icon {
+            width: 16px;
+            height: 16px;
+            background: #facc15;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .trust-check-icon svg {
+            width: 10px;
+            height: 10px;
+            fill: #000000;
+        }
+
+        /* ==========================================================================
+           FOOTER & LEGAL COMPLIANCE
+           ========================================================================== */
+        .footer-section {
+            width: 100%;
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 14px;
+            padding: 0 6px;
+        }
+
+        .compliance-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(14, 22, 32, 0.85);
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            border-radius: 50px;
+            padding: 6px 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .compliance-shield {
+            font-size: 13px;
+        }
+
+        .compliance-text {
+            font-family: var(--font-heading);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .disclaimer-body {
+            font-size: 11px;
+            color: #8192a6;
+            line-height: 1.55;
+            max-width: 480px;
+        }
+
+        .disclaimer-body strong {
+            color: #cbd5e1;
+        }
+
+        .footer-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: #cbd5e1;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        .footer-divider {
+            color: #475569;
+            font-size: 11px;
+        }
+
+        .meta-notice {
+            font-size: 10px;
+            color: #556578;
+            line-height: 1.45;
+            max-width: 460px;
+        }
+
+        /* ==========================================================================
+           MODAL POPUPS (Legal)
+           ========================================================================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 6, 12, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-box {
+            background: #091827;
+            border: 1.5px solid rgba(0, 212, 255, 0.35);
+            border-radius: 20px;
+            max-width: 480px;
+            width: 100%;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 212, 255, 0.2);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .modal-overlay.active .modal-box {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 16px 20px;
+            background: rgba(12, 30, 48, 0.9);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modal-title {
+            font-family: var(--font-heading);
+            font-size: 17px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .modal-close-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .modal-close-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-content {
+            padding: 20px;
+            overflow-y: auto;
+            color: #94a3b8;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .modal-content h3 {
+            color: #e2e8f0;
+            font-size: 14px;
+            margin: 14px 0 6px;
+        }
+
+        .modal-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .modal-footer {
+            padding: 14px 20px;
+            background: rgba(6, 16, 26, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .modal-footer-btn {
+            background: linear-gradient(135deg, var(--tg-blue-light), var(--tg-blue-dark));
+            color: #ffffff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        /* Particles Canvas */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ==========================================================================
+           RESPONSIVE REFINEMENTS
+           ========================================================================== */
+        @media (max-width: 440px) {
+            body {
+                padding: 16px 10px 32px;
+            }
+
+            .main-card {
+                padding: 22px 14px 24px;
+                border-radius: 24px;
+            }
+
+            .brand-title {
+                font-size: 30px;
+            }
+
+            .brand-tagline {
+                font-size: 12px;
+            }
+
+            .btn-telegram {
+                font-size: 15px;
+                padding: 13px 14px;
+                gap: 9px;
+                white-space: nowrap;
+            }
+
+            .tg-icon-circle {
+                width: 28px;
+                height: 28px;
+            }
+
+            .tg-icon-circle img {
+                width: 18px;
+                height: 18px;
+            }
+
+            .stat-value {
+                font-size: 19px;
+            }
+
+            .stat-label {
+                font-size: 9.5px;
+            }
+
+            .features-grid {
+                gap: 8px;
+            }
+
+            .feature-card {
+                padding: 10px 8px;
+                gap: 8px;
+            }
+
+            .feat-title {
+                font-size: 12px;
+            }
+
+            .feat-desc {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .btn-telegram {
+                font-size: 13.5px;
+                padding: 12px 10px;
+                gap: 7px;
+            }
+
+            .brand-title {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
 
-
-
 <body>
-  <div class="container">
+    <!-- Background Canvas for Soft Particles -->
+    <canvas id="particles-canvas"></canvas>
 
-    <!-- Image on Top -->
-    <div class="hero">
-    <a href="https://admin.flipchat.link/pro/dafabet" onclick="gtag_report_conversion()">  <img src="600x1100.jpeg" alt="Dafabet Banner" />
+    <!-- Top & Ambient Glows -->
+    <div class="ambient-glow-top"></div>
+    <div class="ambient-glow-center"></div>
+
+    <div class="page-wrapper">
+        <!-- Main Dark Glassmorphism Card -->
+        <main class="main-card">
+
+            <!-- Top Pill Badge -->
+            <div class="top-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">INDIA'S #1 CRICKET PREDICTION</span>
+                <span class="badge-check">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                </span>
+            </div>
+
+            <!-- Lion Emblem Logo -->
+            <div class="logo-container">
+                <div class="logo-glow-halo"></div>
+                <div class="logo-img-wrapper">
+                    <img src="anna-reddy-logo.webp" alt="Anna Reddy Official Logo" class="logo-img" width="124"
+                        height="124">
+                </div>
+            </div>
+
+            <!-- Brand Heading (White, Yellow & Orange Gradient) -->
+            <h1 class="brand-title">ANNA REDDY</h1>
+
+            <!-- Tagline -->
+            <div class="brand-tagline">
+                <div class="tagline-row">
+                    <span class="bolt-icon">⚡</span>
+                    <span>MATCH WINNER</span>
+                    <span class="bullet-dot">•</span>
+                    <span>TOSS PREDICTION</span>
+                    <span class="bullet-dot">•</span>
+                </div>
+                <div class="tagline-row">
+                    <span>SESSION & TIPS</span>
+                    <span class="bolt-icon">⚡</span>
+                </div>
+            </div>
+
+            <!-- Live Match Active Pill -->
+            <div class="live-status-pill">
+                <span class="live-red-dot"></span>
+                <span class="live-status-text">LIVE MATCH & TOSS PREDICTIONS ACTIVE</span>
+            </div>
+
+            <!-- Hero CTA Button (Official Telegram Blue, 1 Line, Centered GIF & Text, No Arrow) -->
+            <div class="btn-cta-wrapper">
+                <a href="https://admin.flipchat.link/pro/dafabet" target="_blank" rel="noopener noreferrer" class="btn-telegram"
+                    id="main-telegram-btn">
+                    <div class="tg-icon-circle">
+                        <!-- Telegram Animated GIF / SVG -->
+                        <img src="icons8-telegram-app.gif" alt="Telegram" width="20" height="20"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg viewBox="0 0 24 24" style="display: none;">
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.536-.196 1.006.128.832.943z" />
+                        </svg>
+                    </div>
+                    <span class="btn-text">JOIN OFFICIAL TELEGRAM</span>
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-card">
+                <div class="stat-item">
+                    <span class="stat-value" data-target="98.5" data-suffix="%">98.5%</span>
+                    <span class="stat-label">ACCURACY</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-target="100" data-suffix="K+">100K+</span>
+                    <span class="stat-label">MEMBERS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-target="100" data-suffix="%">100%</span>
+                    <span class="stat-label">FREE TIPS</span>
+                </div>
+            </div>
+
+            <!-- 2x2 Feature Grid -->
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box">
+                        <svg class="icon-trophy" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0011 15.9V19H7v2h10v-2h-4v-3.1c1.8-.41 3.23-1.8 3.61-3.96C19.08 11.63 21 9.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z" />
+                        </svg>
+                    </div>
+                    <div class="feat-info">
+                        <div class="feat-title">Match &amp; Toss Winner</div>
+                        <div class="feat-desc">Accurate match &amp; toss reports</div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box">
+                        <svg class="icon-bolt" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 2v11h3v9l7-12h-4l4-8z" />
+                        </svg>
+                    </div>
+                    <div class="feat-info">
+                        <div class="feat-title">Live Session &amp; Lambi</div>
+                        <div class="feat-desc">Over-by-over runs &amp; fancy calls</div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box">
+                        <svg class="icon-target" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+                        </svg>
+                    </div>
+                    <div class="feat-info">
+                        <div class="feat-title">Jackpot Matches</div>
+                        <div class="feat-desc">High profit rate &amp; jackpot calls</div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box">
+                        <svg class="icon-analysis" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg>
+                    </div>
+                    <div class="feat-info">
+                        <div class="feat-title">Pitch &amp; Team Analysis</div>
+                        <div class="feat-desc">Expert ground &amp; playing XI stats</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Trust Badges -->
+            <div class="trust-badges-container">
+                <div class="trust-row">
+                    <div class="trust-item">
+                        <div class="trust-check-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                        </div>
+                        <span>100% Free Daily Tips</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-check-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                        </div>
+                        <span>98%+ Accuracy Rate</span>
+                    </div>
+                </div>
+                <div class="trust-row">
+                    <div class="trust-item">
+                        <div class="trust-check-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                        </div>
+                        <span>Instant Telegram Alerts</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Compliance & Legal Disclaimer Footer -->
+        <footer class="footer-section">
+            <!-- 18+ Age Compliance Pill -->
+            <div class="compliance-pill">
+                <span class="compliance-shield">🛡️</span>
+                <span class="compliance-text">18+ ONLY | EDUCATIONAL &amp; SPORTS RESEARCH PLATFORM</span>
+            </div>
+
+            <!-- Platform Disclaimer Text -->
+            <p class="disclaimer-body">
+                <strong>Disclaimer:</strong> Anna Reddy is an independent sports analytics and cricket match research
+                platform. All match predictions, toss reports, and statistical breakdowns are published for
+                informational, analytical, and entertainment purposes only.
+            </p>
+
+            <!-- Legal Nav Links -->
+            <nav class="footer-nav" aria-label="Legal Links">
+                <a class="footer-link" onclick="openLegalModal('privacy')">Privacy Policy</a>
+                <span class="footer-divider">•</span>
+                <a class="footer-link" onclick="openLegalModal('terms')">Terms of Service</a>
+                <span class="footer-divider">•</span>
+                <a class="footer-link" onclick="openLegalModal('disclaimer')">Full Disclaimer</a>
+            </nav>
+
+            <!-- Meta / Facebook Compliance Notice -->
+            <p class="meta-notice">
+                This site is not a part of the Facebook website or Meta Platforms, Inc. Additionally, this site is NOT
+                endorsed by Meta in any way. FACEBOOK is a trademark of META PLATFORMS, Inc.
+            </p>
+        </footer>
     </div>
 
-    <!-- Button Section -->
-    <div class="cta">
-      <button >WhatsApp Now</button></a>
+    <!-- ==========================================================================
+         INTERACTIVE LEGAL MODAL
+         ========================================================================== -->
+    <div class="modal-overlay" id="legal-modal" onclick="handleModalBackdropClick(event, 'legal-modal')">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-title" id="legal-modal-title">Legal Information</div>
+                <button type="button" class="modal-close-btn" onclick="closeLegalModal()"
+                    aria-label="Close modal">✕</button>
+            </div>
+            <div class="modal-content" id="legal-modal-body">
+                <!-- Injected via JS -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="modal-footer-btn" onclick="closeLegalModal()">Close</button>
+            </div>
+        </div>
     </div>
 
-    <!-- Content Section -->
-    <div class="content">
-      <h2>100% Original Services | Trusted Service Provider</h2>
-      <p>
-        Dafabet Consultancy — Empowering Businesses Through Data, Design & Decisions Welcome to Dafabet Consultancy, India’s trusted partner for business growth, digital transformation, and conversion strategy. Based in Pune, we specialize in helping startups and established enterprises turn data insights into measurable results. Whether you’re struggling with low lead quality, high churn rates, or inefficient marketing spend, we bring clarity, structure, and strategy that deliver tangible outcomes.
-      </p></br>
-      <p>
-        Our philosophy is simple: growth begins with understanding. By combining behavioral psychology, marketing analytics, and customer journey mapping, we uncover what truly drives your users — and use that knowledge to design experiences that convert. At Dafabet Consultancy, every decision is supported by research and every recommendation is measurable.
-      </p></br>
-      <p>
-        Our Mission — Conversions That Create Confidence Many businesses measure success in clicks and followers. We measure it in actions and outcomes. Our mission is to help Indian brands move beyond surface-level marketing into data-driven, conversion-optimized growth. We build strategies that don’t just attract attention — they inspire action, build trust, and sustain profitability.
-      </p></br>
-      <p>
-        Through our structured growth programs, we ensure that every rupee you invest delivers real returns. Our consultants dive deep into your funnel, identify bottlenecks, and design measurable solutions to improve acquisition, activation, and retention.
-      </p></br>
+    <!-- ==========================================================================
+         JAVASCRIPT FUNCTIONALITY
+         ========================================================================== -->
+    <script>
+        // CONFIGURATION: Official Telegram Links
+        const TELEGRAM_LINK = "https://admin.flipchat.link/pro/dafabet";
 
-  <p>
-        
-Our Core Services 1. Business & Marketing Strategy We partner with leadership teams to create a clear path to growth. From go-to-market planning to revenue optimization, our consulting process blends research, positioning, and performance tracking to ensure alignment with business goals.
-      </p></br>
-      <p>
-<ol>
-       <li> Conversion Optimization (CRO) Turning visitors into customers is both an art and a science. We apply heatmaps, user testing, and A/B experiments to refine your digital experience. Every test is designed to improve engagement, boost trust, and increase conversion rates sustainably.</li>
-<li>Data & Analytics Setup We implement advanced analytics tools that reveal where your leads come from, what actions they take, and what influences their decisions. By integrating platforms like Google Analytics, Tag Manager, and CRM data, we create visibility across your entire funnel.</li>
-<li>Brand Positioning & Communication In a crowded digital world, clarity wins. We craft persuasive messaging and visual design that differentiate your brand and strengthen credibility. Our storytelling frameworks are built to resonate emotionally while aligning with your strategic objectives.</li>
-<li>Customer Retention & Loyalty Systems Growth doesn’t end with acquisition. We help brands design retention flows — including email sequences, loyalty programs, and reactivation campaigns — that increase lifetime value and reduce churn.</li><ol>
-      </p></br>
+        // Initialize Telegram Links & Tracking
+        document.addEventListener('DOMContentLoaded', () => {
+            const tgBtn = document.getElementById('main-telegram-btn');
+            if (tgBtn) {
+                tgBtn.href = TELEGRAM_LINK;
 
- <p>
-        
-Our Approach — The Dafabet Method Our consulting process is transparent, agile, and performance-driven. We follow a simple but effective four-stage method:
-      </p></br>
+                // Click Tracker for Meta Pixel
+                tgBtn.addEventListener('click', (e) => {
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'Lead', {
+                            content_name: 'Anna Reddy Telegram Channel',
+                            content_category: 'Cricket Predictions'
+                        });
+                    }
+                });
+            }
 
+            // Initialize Animated Counters
+            initAnimatedStats();
 
- <p>
-        
-Discover: We begin with deep discovery — understanding your customers, competitors, and performance data. Diagnose: Using analytics and behavioral insights, we identify what’s working and what’s holding you back. Design: We craft targeted solutions — from new landing pages to automated funnels — designed for measurable impact. Deliver: We execute, monitor, and optimize continuously to ensure your results improve month after month. Industries We Empower Over the years, Dafabet Consultancy has worked with businesses across a wide spectrum of industries, each with unique challenges and opportunities:
-      </p></br>
+            // Initialize Background Canvas Particles
+            initParticles();
+        });
 
+        // 1. Animated Stats Counter
+        function initAnimatedStats() {
+            const stats = document.querySelectorAll('.stat-value');
+            stats.forEach(stat => {
+                const target = parseFloat(stat.getAttribute('data-target'));
+                const suffix = stat.getAttribute('data-suffix') || '';
+                const isDecimal = target % 1 !== 0;
+                let current = 0;
+                const duration = 1600;
+                const steps = 40;
+                const increment = target / steps;
+                const stepTime = duration / steps;
 
- <p>
-        
-Technology & SaaS: Simplifying onboarding and boosting trial-to-paid conversions. Retail & E-Commerce: Increasing cart completion rates and repeat purchases. Finance & Insurance: Streamlining lead qualification and improving trust-driven conversion funnels. Healthcare & Wellness: Building compliant, conversion-optimized patient acquisition systems. Education & Training: Enhancing enrollment rates through persuasive communication and optimized flows. Why Businesses Trust Dafabet Consultancy What sets Dafabet Consultancy apart is our commitment to clarity, ethics, and measurable growth. We don’t sell shortcuts; we build systems. We’re known for combining empathy with analytics, ensuring every campaign respects both user intent and business goals.
-      </p></br>
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+                }, stepTime);
+            });
+        }
 
+        // 2. Legal Modals Management
+        const modalData = {
+            privacy: {
+                title: "Privacy Policy",
+                content: `
+                    <h3>1. Information Collection</h3>
+                    <p>Anna Reddy operates as an informational sports analytics platform. We do not collect personal financial details or store sensitive personal information on this landing page.</p>
+                    <h3>2. External Links & Third-Party Platforms</h3>
+                    <p>Our website provides direct links to the Telegram messenger platform. When clicking external links, you are subject to the privacy practices and terms of the respective platform.</p>
+                    <h3>3. Cookies and Analytics</h3>
+                    <p>Standard analytics tags and Meta Pixel cookies may be utilized solely for aggregated web performance measurement and advertising campaign tracking.</p>
+                    <h3>4. Updates to Policy</h3>
+                    <p>We may periodically update our privacy practices to maintain regulatory compliance. Continuous use signifies acceptance of updated policies.</p>
+                `
+            },
+            terms: {
+                title: "Terms of Service",
+                content: `
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>By browsing this website and accessing Anna Reddy cricket analysis, you affirm that you are at least 18 years of age and agree to comply with all local sports laws and regulations.</p>
+                    <h3>2. Nature of Service</h3>
+                    <p>All cricket match analyses, toss breakdowns, pitch updates, and session opinions are provided strictly for research, statistics, and entertainment purposes. We do not operate gambling activities on this platform.</p>
+                    <h3>3. Limitation of Liability</h3>
+                    <p>Users are solely responsible for their personal decisions. Sports outcomes are inherently unpredictable; past accuracy metrics do not constitute absolute guarantees of future match results.</p>
+                `
+            },
+            disclaimer: {
+                title: "Full Disclaimer & Notice",
+                content: `
+                    <h3>Educational & Sports Research Only</h3>
+                    <p>Anna Reddy is dedicated to providing sports statistics, match research, and enthusiast discussion. None of the content provided represents financial, investment, or legal advice.</p>
+                    <h3>18+ Age Restriction</h3>
+                    <p>Access to sports prediction communities is strictly limited to adults aged 18 years or older. If you are underage, please exit immediately.</p>
+                    <h3>No Meta Endorsement</h3>
+                    <p>This website is not affiliated with, sponsored by, or endorsed by Meta Platforms, Inc. or Facebook.</p>
+                `
+            }
+        };
 
- <p>
-Our clients stay with us not because they have to — but because they see results. From better lead quality to improved ROI, every engagement brings accountability and transparency. We work as your strategic partner, not an external vendor.
-      </p></br>
+        function openLegalModal(type) {
+            const modal = document.getElementById('legal-modal');
+            const title = document.getElementById('legal-modal-title');
+            const body = document.getElementById('legal-modal-body');
 
+            if (modalData[type]) {
+                title.textContent = modalData[type].title;
+                body.innerHTML = modalData[type].content;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
 
- <p>
-Our Promise to You When you work with Dafabet Consultancy, you gain a partner obsessed with outcomes. We promise:
-      </p></br>
+        function closeLegalModal() {
+            const modal = document.getElementById('legal-modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
 
- <p>
-Data-driven recommendations that are actionable and clear. Ethical marketing that prioritizes user trust. Transparent reporting and regular performance reviews. Ongoing collaboration focused on continuous improvement. Start Your Growth Journey with Dafabet Consultancy Book a discovery session today and see how we can help you turn potential into performance. Let’s define your biggest opportunities and design a roadmap for measurable, sustainable growth.
-      </p></br>
+        function handleModalBackdropClick(e, modalId) {
+            if (e.target.id === modalId) {
+                if (modalId === 'legal-modal') closeLegalModal();
+            }
+        }
 
- <p>
-Dafabet Consultancy 401, Solaris Business Hub, Baner, Pune, Maharashtra, India — 411045 📞 
-      </p></br>
-    </div>
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLegalModal();
+            }
+        });
 
-    <!-- Extra Links -->
-    <div class="links">
-      <a href="#">Subscribe on Twitch</a>
-      <a href="#">Become a Patron</a>
-      <a href="#">Shop My Work</a>
-      <a href="#">Join My Discord</a>
-    </div>
+        // 3. Subtle Particle Background Canvas
+        function initParticles() {
+            const canvas = document.getElementById('particles-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
 
-    <footer>
-      © 2026 Dafabet. All rights reserved.
-    </footer>
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
 
-  </div>
+            const particleCount = Math.min(width > 600 ? 35 : 20, 40);
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    radius: Math.random() * 1.5 + 0.5,
+                    color: Math.random() > 0.6 ? 'rgba(250, 204, 21, ' : 'rgba(34, 158, 217, ',
+                    alpha: Math.random() * 0.4 + 0.1,
+                    speedY: -(Math.random() * 0.4 + 0.1),
+                    speedX: (Math.random() - 0.5) * 0.2
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color + p.alpha + ')';
+                    ctx.fill();
+
+                    p.y += p.speedY;
+                    p.x += p.speedX;
+
+                    if (p.y < 0) {
+                        p.y = height + 5;
+                        p.x = Math.random() * width;
+                    }
+                    if (p.x < 0) p.x = width;
+                    if (p.x > width) p.x = 0;
+                });
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Big X Food House | Instant Reply & Orders</title>
+    <meta name="description"
+        content="Big X Food House - Delicious taste, instant reply, lightning fast service, and 24/7 dedicated support. Order now directly on WhatsApp!">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Big X Food House - Instant Reply & Fast Orders">
+    <meta property="og:description"
+        content="Big X Food House - Delicious taste, instant reply, lightning fast service, and easy WhatsApp ordering.">
+    <meta property="og:image" content="hero-image.jpeg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* WhatsApp Colors Provided By User */
+            --wa-green-start: #25D366;
+            /* Bright WhatsApp Green */
+            --wa-green-mid: #1ea952;
+            /* Vibrant Green */
+            --wa-green-dark: #128C7E;
+            /* Dark Teal/Green */
+
+            /* Hover State Colors */
+            --wa-hover-start: #2ce470;
+            --wa-hover-mid: #22be5e;
+            --wa-hover-dark: #169b8b;
+
+            /* Neon Border Colors */
+            --wa-neon-glow: #a6ffc3;
+            /* Mint light neon */
+            --wa-neon-white: #ffffff;
+            /* Pure white shine */
+
+            /* Shadows & Text */
+            --wa-shadow: rgba(37, 211, 102, 0.35);
+            --wa-shadow-hover: rgba(37, 211, 102, 0.55);
+            --wa-text-color: #ffffff;
+
+            /* Big X Food House Theme Tokens */
+            --bg-dark: #070b14;
+            --bg-deep-navy: #050b18;
+            --gold-primary: #ffbf00;
+            --gold-light: #ffe57f;
+            --blue-accent: #1e70ff;
+            --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* RESET & BASE */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* ========================================================
+           1. HERO SECTION (ONLY IMAGE & BUTTON - PRESERVED 100%)
+           ======================================================== */
+        .hero-section {
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0 35px 0;
+            position: relative;
+            background-color: var(--bg-dark);
+            background-image:
+                radial-gradient(circle at 50% 30%, rgba(255, 120, 0, 0.22), transparent 55%),
+                radial-gradient(circle at 50% 75%, rgba(37, 211, 102, 0.15), transparent 50%),
+                linear-gradient(180deg, #05080f 0%, #0d0e18 50%, #05080f 100%);
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .landing-container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            position: relative;
+            z-index: 2;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            border-radius: 0;
+            overflow: hidden;
+            background: transparent;
+            border: none;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+        }
+
+        .image-wrapper:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.75), 0 0 30px rgba(255, 120, 0, 0.3);
+        }
+
+        .ad-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: 0;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        /* EXACT WHATSAPP BUTTON (PROVIDED BY USER) */
+        .whatsapp-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-height: 58px;
+            width: 100%;
+            padding: 14px 32px;
+            border-radius: 9999px !important;
+            color: #ffffff !important;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            overflow: hidden;
+            z-index: 1;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 26px rgba(37, 211, 102, 0.35);
+            transition: transform .25s ease, box-shadow .25s ease;
+            text-transform: uppercase;
+            font-family: var(--font-display);
+        }
+
+        .whatsapp-btn::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg,
+                    transparent 0deg,
+                    transparent 240deg,
+                    #25D366 280deg,
+                    #a6ffc3 325deg,
+                    #ffffff 350deg,
+                    #25D366 360deg);
+            animation: neonRotateClockwise 2.5s linear infinite;
+            z-index: -2;
+        }
+
+        .whatsapp-btn::after {
+            content: "";
+            position: absolute;
+            inset: 2.5px;
+            border-radius: 9999px !important;
+            background: linear-gradient(135deg, #25D366 0%, #1ea952 45%, #128C7E 100%);
+            z-index: -1;
+            transition: background .3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.55), 0 0 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn:hover::after {
+            background: linear-gradient(135deg, #2ce470 0%, #22be5e 45%, #169b8b 100%);
+        }
+
+        @keyframes neonRotateClockwise {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .whatsapp-gif {
+            width: 32px;
+            height: 32px;
+            border-radius: 100% !important;
+            object-fit: cover;
+            display: inline-block;
+            vertical-align: middle;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ========================================================
+           2. ABOUT SECTION (VIBRANT ORANGE CARDS & REFRESHED CONTENT)
+           ======================================================== */
+        .about-section {
+            background: #ffffff;
+            background-image:
+                radial-gradient(circle at 50% 0%, rgba(255, 107, 0, 0.07), transparent 65%),
+                radial-gradient(circle at 10% 90%, rgba(255, 140, 0, 0.04), transparent 50%),
+                radial-gradient(circle at 90% 90%, rgba(37, 211, 102, 0.04), transparent 50%);
+            color: #0f172a;
+            padding: 95px 20px;
+            position: relative;
+        }
+
+        .about-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 22px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: rgba(255, 107, 0, 0.1);
+            border: 1.5px solid rgba(255, 107, 0, 0.35);
+            color: #e65100;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.12);
+        }
+
+        .about-title {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4.5vw, 44px);
+            font-weight: 900;
+            color: #091124;
+            line-height: 1.22;
+            max-width: 840px;
+            margin: 0 auto 18px;
+            letter-spacing: -0.5px;
+        }
+
+        .about-title span {
+            color: #ff6b00;
+            background: linear-gradient(135deg, #ff4d00 0%, #ff8800 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-desc {
+            font-size: clamp(15px, 2vw, 17px);
+            color: #475569;
+            max-width: 800px;
+            margin: 0 auto 52px;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .about-features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1140px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* VIBRANT ORANGE BOXES WITH GLOW & SHINE */
+        .about-feature-box {
+            background: linear-gradient(145deg, #ff6a00 0%, #ff5200 48%, #e04400 100%);
+            border: 1.5px solid rgba(255, 230, 160, 0.45);
+            border-radius: 22px;
+            padding: 34px 22px 30px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                0 14px 34px rgba(230, 70, 0, 0.28),
+                0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Glass reflection overlay */
+        .about-feature-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 42%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 22px 22px 0 0;
+            pointer-events: none;
+        }
+
+        .about-feature-box:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow:
+                0 22px 48px rgba(230, 70, 0, 0.42),
+                0 0 30px rgba(255, 170, 0, 0.35);
+            border-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .about-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            background: #ffffff;
+            box-shadow:
+                0 8px 22px rgba(0, 0, 0, 0.16),
+                inset 0 2px 4px rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(255, 255, 255, 0.95);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+        }
+
+        .about-feature-box:hover .about-icon {
+            transform: scale(1.12) rotate(6deg);
+        }
+
+        .about-feature-box h3 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(180, 45, 0, 0.4);
+        }
+
+        .about-feature-box p {
+            font-size: 14.5px;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.62;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 1px 2px rgba(160, 40, 0, 0.25);
+        }
+
+        .about-cta-wrap {
+            margin-top: 45px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-cta-wrap .whatsapp-btn {
+            max-width: 360px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* ========================================================
+           3. SPECIALTIES & MENU SECTION (CLEAN, HUMAN & PUNCHY)
+           ======================================================== */
+        .our-services-section {
+            background: #060a14;
+            background-image:
+                radial-gradient(circle at 15% 20%, rgba(255, 107, 0, 0.12), transparent 50%),
+                radial-gradient(circle at 85% 80%, rgba(255, 191, 0, 0.08), transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(37, 211, 102, 0.05), transparent 60%),
+                linear-gradient(180deg, #060a14 0%, #0a1020 50%, #060a14 100%);
+            padding: 90px 20px 100px;
+            position: relative;
+        }
+
+        .services-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 50px;
+        }
+
+        .services-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            background: rgba(255, 120, 0, 0.1);
+            border: 1px solid rgba(255, 140, 0, 0.35);
+            color: #ffa114;
+            margin-bottom: 14px;
+        }
+
+        .services-title {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4.5vw, 42px);
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.22;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .services-title span {
+            background: linear-gradient(135deg, #ffa726 0%, #ff6b00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-subtitle {
+            font-size: 15px;
+            color: #94a3b8;
+            line-height: 1.6;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .our-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        /* SLEEK MODERN CARDS - NO GENERIC AI LOOK */
+        .service-box {
+            background: linear-gradient(165deg, rgba(19, 27, 46, 0.82) 0%, rgba(10, 15, 26, 0.94) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 26px 24px 22px;
+            position: relative;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .service-box:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255, 120, 0, 0.45);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 24px rgba(255, 107, 0, 0.18);
+        }
+
+        .service-box-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .service-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background: rgba(255, 107, 0, 0.12);
+            border: 1px solid rgba(255, 120, 0, 0.28);
+            color: #ff8800;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .service-box:hover .service-icon-box {
+            transform: scale(1.1) rotate(4deg);
+        }
+
+        .service-badge {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #cbd5e1;
+        }
+
+        .service-badge.badge-hot {
+            background: rgba(255, 87, 34, 0.15);
+            border-color: rgba(255, 87, 34, 0.4);
+            color: #ff7043;
+        }
+
+        .service-badge.badge-green {
+            background: rgba(37, 211, 102, 0.12);
+            border-color: rgba(37, 211, 102, 0.35);
+            color: #4ade80;
+        }
+
+        .service-badge.badge-gold {
+            background: rgba(255, 191, 0, 0.14);
+            border-color: rgba(255, 191, 0, 0.35);
+            color: #facc15;
+        }
+
+        .service-box h3 {
+            font-family: var(--font-display);
+            font-size: 19px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .service-box p {
+            font-size: 13.5px;
+            color: #94a3b8;
+            line-height: 1.55;
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+
+        /* ========================================================
+           4. FAQ SECTION
+           ======================================================== */
+        .faq-section {
+            background: #040813;
+            padding: 90px 20px 95px;
+            position: relative;
+        }
+
+        .faq-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+
+        .faq-pill {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            background: rgba(255, 191, 0, 0.08);
+            border: 1px solid rgba(255, 191, 0, 0.3);
+            color: var(--gold-primary);
+            margin-bottom: 12px;
+        }
+
+        .faq-title {
+            font-family: var(--font-display);
+            font-size: clamp(26px, 4vw, 38px);
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .faq-title span {
+            color: var(--gold-primary);
+        }
+
+        .faq-wrap {
+            max-width: 740px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .faq-item {
+            background: #081226;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: border-color 0.25s ease;
+        }
+
+        .faq-item.active {
+            border-color: rgba(30, 112, 255, 0.5);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-family: var(--font-display);
+            font-size: 16px;
+            font-weight: 700;
+            text-align: left;
+            cursor: pointer;
+            gap: 12px;
+        }
+
+        .faq-icon {
+            font-size: 20px;
+            color: var(--gold-primary);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 22px;
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.65;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 220px;
+            padding: 0 22px 20px;
+        }
+
+        /* ========================================================
+           5. FOOTER (INCLUDES THE LANDING SERVICES CTA BOX & BAR)
+           ======================================================== */
+        .site-footer {
+            background: #030713;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+        }
+
+        /* TOP CTA PART OF FOOTER (MATCHING USER SCREENSHOT) */
+        .footer-cta-block {
+            padding: 75px 20px 65px;
+            background:
+                radial-gradient(circle at 50% 25%, rgba(30, 112, 255, 0.16), transparent 60%),
+                linear-gradient(180deg, #030713 0%, #060d24 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .services-heading-wrap {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .services-main-title {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4.5vw, 42px);
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        .title-underline {
+            width: 80px;
+            height: 4px;
+            background: #ffffff;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+
+        /* Featured Blue Card like in screenshot - Mobile Responsive */
+        .services-featured-card {
+            max-width: 620px;
+            width: 100%;
+            margin: 0 auto;
+            background: #0c1836;
+            border: 1.5px solid #1a336f;
+            border-radius: 20px;
+            padding: 38px 28px;
+            text-align: center;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(30, 112, 255, 0.18);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .service-pill-tag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            max-width: 100%;
+            padding: 9px 20px;
+            border-radius: 50px;
+            background: rgba(30, 48, 92, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            color: #ffe699;
+            font-size: clamp(11.5px, 2.8vw, 13px);
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            line-height: 1.4;
+            flex-wrap: wrap;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .service-card-text {
+            font-size: clamp(14px, 3.8vw, 16px);
+            color: #cbd5e1;
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0 auto 30px;
+            padding: 0 4px;
+            word-wrap: break-word;
+        }
+
+        .service-card-text strong {
+            color: #ffffff;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        /* Electric Yellow Pill Button matching screenshot */
+        .telegram-yellow-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-height: 52px;
+            max-width: 100%;
+            padding: 12px 34px;
+            border-radius: 9999px;
+            background: #e6ff00;
+            background: linear-gradient(180deg, #f4ff2b 0%, #d8f500 100%);
+            color: #000000 !important;
+            font-family: var(--font-display);
+            font-size: 15px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(230, 255, 0, 0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .telegram-yellow-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(230, 255, 0, 0.55);
+        }
+
+        .telegram-icon-img {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: inline-block;
+        }
+
+        /* BOTTOM FOOTER BAR (MATCHING SCREENSHOT) */
+        .footer-bottom-bar {
+            padding: 42px 20px 48px;
+            background: #02050e;
+        }
+
+        .footer-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-tagline {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #f59e0b;
+            text-transform: uppercase;
+        }
+
+        .footer-copy {
+            margin-top: 6px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-nav {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-nav a {
+            font-size: 13px;
+            font-weight: 600;
+            color: #cbd5e1;
+            transition: color 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Floating Circular WhatsApp Button at Bottom Right */
+        .floating-wa-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            left: auto;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+            z-index: 999;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .floating-wa-btn:hover {
+            transform: scale(1.08) translateY(-2px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.65);
+        }
+
+        .floating-wa-img {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* ========================================================
+           MODALS (PRIVACY POLICY, TERMS, CONTACT)
+           ======================================================== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-box {
+            background: #0b152d;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            padding: 32px 28px;
+            position: relative;
+            color: #ffffff;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(30, 112, 255, 0.15);
+            max-height: 86vh;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+
+        .modal-box.modal-large {
+            max-width: 780px;
+        }
+
+        .modal-box::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .modal-box::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+        }
+
+        .modal-box::-webkit-scrollbar-thumb {
+            background: rgba(255, 191, 0, 0.35);
+            border-radius: 6px;
+        }
+
+        .modal-box::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-primary);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #94a3b8;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            transform: scale(1.08);
+        }
+
+        .modal-header-wrap {
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: rgba(255, 191, 0, 0.12);
+            color: var(--gold-primary);
+            border: 1px solid rgba(255, 191, 0, 0.25);
+            margin-bottom: 8px;
+        }
+
+        .modal-box h3 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .modal-meta-info {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .modal-body-content {
+            font-size: 13.5px;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .modal-body-content h4 {
+            font-family: var(--font-display);
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 22px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-body-content h4 span.sec-num {
+            color: var(--gold-primary);
+            font-size: 14px;
+        }
+
+        .modal-body-content p {
+            font-size: 13.5px;
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .modal-body-content ul {
+            margin: 6px 0 14px 20px;
+            padding: 0;
+        }
+
+        .modal-body-content li {
+            margin-bottom: 6px;
+            color: #cbd5e1;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .modal-body-content strong {
+            color: #ffffff;
+        }
+
+        .modal-callout {
+            background: rgba(30, 112, 255, 0.08);
+            border-left: 3px solid var(--blue-accent);
+            padding: 12px 16px;
+            border-radius: 0 10px 10px 0;
+            margin: 14px 0;
+            font-size: 13px;
+            color: #e2e8f0;
+        }
+
+        .modal-callout.warning {
+            background: rgba(255, 191, 0, 0.08);
+            border-left-color: var(--gold-primary);
+        }
+
+        .modal-footer-cta {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .modal-external-link {
+            font-size: 12px;
+            color: var(--gold-primary);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        .modal-external-link:hover {
+            color: #ffffff;
+        }
+
+        /* RESPONSIVE STYLES */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: auto;
+                padding: 0 0 25px 0 !important;
+                width: 100% !important;
+            }
+
+            .landing-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                gap: 16px;
+            }
+
+            .image-wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+                border-radius: 0 !important;
+                border: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+            }
+
+            .ad-image {
+                width: 100% !important;
+                max-width: 100% !important;
+                border-radius: 0 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .hero-section .whatsapp-btn {
+                width: calc(100% - 32px) !important;
+                max-width: 420px;
+                margin: 0 auto;
+            }
+
+            .footer-cta-block {
+                padding: 55px 16px 45px;
+                overflow: hidden;
+            }
+
+            .services-heading-wrap {
+                margin-bottom: 26px;
+            }
+
+            .services-main-title {
+                font-size: clamp(22px, 5.5vw, 32px);
+                line-height: 1.25;
+                padding: 0 6px;
+                word-wrap: break-word;
+            }
+
+            .title-underline {
+                width: 60px;
+                height: 3.5px;
+            }
+
+            .services-featured-card {
+                padding: 26px 16px;
+                border-radius: 18px;
+            }
+
+            .service-pill-tag {
+                padding: 8px 14px;
+                font-size: clamp(11px, 2.9vw, 12.5px);
+                letter-spacing: 0.5px;
+                line-height: 1.35;
+                margin-bottom: 18px;
+            }
+
+            .service-card-text {
+                font-size: 14.5px;
+                line-height: 1.6;
+                margin-bottom: 24px;
+                padding: 0 4px;
+            }
+
+            .telegram-yellow-btn {
+                width: 100%;
+                max-width: 380px;
+                font-size: clamp(13px, 3.6vw, 14.5px);
+                padding: 12px 18px;
+                min-height: 48px;
+            }
+
+            .telegram-icon-img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .footer-bottom-bar {
+                padding: 36px 16px 85px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 22px;
+                width: 100%;
+            }
+
+            .footer-left {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-logo {
+                font-size: clamp(20px, 5.5vw, 24px);
+                text-align: center;
+            }
+
+            .footer-tagline {
+                font-size: 11px;
+                letter-spacing: 1.5px;
+                text-align: center;
+            }
+
+            .footer-copy {
+                font-size: 12px;
+                margin-top: 5px;
+                text-align: center;
+            }
+
+            .footer-right {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .footer-nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 12px 18px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-nav li a {
+                font-size: 13px;
+                padding: 4px 0;
+                display: inline-block;
+            }
+
+            .about-section {
+                padding: 65px 16px;
+            }
+
+            .about-features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+                max-width: 660px;
+            }
+
+            .about-feature-box {
+                padding: 28px 18px 24px;
+                border-radius: 20px;
+            }
+
+            .about-icon {
+                width: 58px;
+                height: 58px;
+                font-size: 26px;
+                margin-bottom: 16px;
+                border-radius: 16px;
+            }
+
+            .about-feature-box h3 {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            .about-feature-box p {
+                font-size: 13.5px;
+            }
+
+            .our-services-section {
+                padding: 60px 16px;
+            }
+
+            .services-header {
+                margin-bottom: 35px;
+            }
+
+            .our-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .service-box {
+                padding: 22px 18px 18px;
+                border-radius: 18px;
+            }
+
+            .service-box h3 {
+                font-size: 17.5px;
+            }
+
+            .service-box p {
+                font-size: 13px;
+            }
+
+            .floating-wa-btn {
+                bottom: 18px;
+                right: 18px;
+                left: auto;
+                width: 54px;
+                height: 54px;
+            }
+
+            .floating-wa-img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 0 0 20px 0 !important;
+                width: 100% !important;
+            }
+
+            .landing-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                gap: 14px;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .image-wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+                border-radius: 0 !important;
+                border: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5) !important;
+            }
+
+            .ad-image {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                border-radius: 0 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .hero-section .whatsapp-btn {
+                width: calc(100% - 24px) !important;
+                margin: 0 auto;
+            }
+
+            .whatsapp-btn {
+                min-height: 52px;
+                padding: 12px 20px;
+                font-size: 15px;
+            }
+
+            .about-section {
+                padding: 50px 14px;
+            }
+
+            .about-pill {
+                font-size: 11px;
+                padding: 7px 16px;
+                letter-spacing: 1.2px;
+                margin-bottom: 12px;
+            }
+
+            .about-title {
+                font-size: clamp(23px, 6.2vw, 30px);
+                line-height: 1.25;
+                margin-bottom: 12px;
+            }
+
+            .about-desc {
+                font-size: 14px;
+                line-height: 1.62;
+                margin-bottom: 28px;
+                padding: 0 4px;
+            }
+
+            .about-features-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                max-width: 100%;
+            }
+
+            .about-feature-box {
+                padding: 26px 18px 22px;
+                border-radius: 18px;
+                box-shadow: 0 10px 24px rgba(230, 70, 0, 0.22);
+            }
+
+            .about-icon {
+                width: 56px;
+                height: 56px;
+                font-size: 25px;
+                margin-bottom: 14px;
+                border-radius: 16px;
+            }
+
+            .about-feature-box h3 {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            .about-feature-box p {
+                font-size: 13.5px;
+            }
+
+            .about-cta-wrap {
+                margin-top: 28px;
+            }
+
+            .about-cta-wrap .whatsapp-btn {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .our-services-section {
+                padding: 48px 14px;
+            }
+
+            .services-pill {
+                font-size: 11px;
+                padding: 6px 16px;
+                margin-bottom: 10px;
+            }
+
+            .services-title {
+                font-size: clamp(23px, 6.2vw, 30px);
+                margin-bottom: 10px;
+            }
+
+            .services-subtitle {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .our-services-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+                max-width: 100%;
+            }
+
+            .service-box {
+                padding: 20px 18px 16px;
+                border-radius: 16px;
+            }
+
+            .services-featured-card {
+                padding: 22px 12px;
+                border-radius: 16px;
+            }
+
+            .service-pill-tag {
+                padding: 7px 12px;
+                font-size: 11px;
+                gap: 6px;
+                letter-spacing: 0.4px;
+            }
+
+            .telegram-yellow-btn {
+                padding: 11px 14px;
+                font-size: 13px;
+                gap: 8px;
+            }
+
+            .telegram-icon-img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1977521999586269');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1977521999586269&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+    <!-- ========================================================
+         1. HERO SECTION (ONLY IMAGE & ANIMATED WHATSAPP BUTTON)
+         ======================================================== -->
+    <section class="hero-section" id="hero">
+        <div class="landing-container">
+            <!-- FULL HERO IMAGE (CLICKABLE TO WHATSAPP) -->
+            <a href="https://admin.flipchat.link/pro/dafabet" class="image-wrapper wa-link" target="_blank"
+                rel="noopener noreferrer" title="Big X Food House - Order Now on WhatsApp">
+                <img src="hero-image.jpeg" alt="Big X Food House - Instant Reply Order Now" class="ad-image"
+                    loading="eager" draggable="false">
+            </a>
+
+            <!-- ONLY BUTTON (USING EXACT USER WHATSAPP CODE) -->
+            <a href="https://admin.flipchat.link/pro/dafabet" class="whatsapp-btn wa-link" id="heroWhatsAppBtn"
+                target="_blank" rel="noopener noreferrer">
+                <img src="whatsapp.gif" alt="WhatsApp" class="whatsapp-gif">
+                <span>CHAT ON WHATSAPP</span>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         2. ABOUT SECTION (ORANGE BOXES, REFRESHED FOOD & SERVICE CONTENT)
+         ======================================================== -->
+    <section class="about-section" id="about">
+        <div class="container text-center">
+            <span class="about-pill">🔥 ABOUT BIG X FOOD HOUSE</span>
+            <h2 class="about-title">Fresh, Delicious Food & <span>Instant 1-Tap Delivery</span></h2>
+            <p class="about-desc">
+                Welcome to <strong>Big X Food House</strong>! We bring you sizzling fast food, handcrafted burgers,
+                crispy bites, and mouth-watering meals made fresh to order. Experience lightning-fast <strong>Instant
+                    WhatsApp Replies</strong> and speedy doorstep delivery that satisfies your cravings in minutes!
+            </p>
+
+            <div class="about-features-grid">
+                <!-- Box 1 -->
+                <div class="about-feature-box">
+                    <div class="about-icon">🍔</div>
+                    <h3>Fresh & Delicious Food</h3>
+                    <p>Made fresh to order with premium ingredients, signature house spices, and irresistible taste in
+                        every single bite.</p>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="about-feature-box">
+                    <div class="about-icon">⚡</div>
+                    <h3>Instant WhatsApp Reply</h3>
+                    <p>Zero waiting time! Message our live WhatsApp desk to get instant real-time replies and place your
+                        order in seconds.</p>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="about-feature-box">
+                    <div class="about-icon">🚀</div>
+                    <h3>Super-Fast Delivery</h3>
+                    <p>Piping-hot, freshly packed meals delivered right to your doorstep with express speed and
+                        temperature-sealed packaging.</p>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="about-feature-box">
+                    <div class="about-icon">🛡️</div>
+                    <h3>100% Quality & Hygiene</h3>
+                    <p>Prepared in sanitized, high-standard kitchens with certified food safety practices for complete
+                        peace of mind.</p>
+                </div>
+            </div>
+
+            <!-- WhatsApp Order CTA -->
+            <div class="about-cta-wrap">
+                <a href="https://admin.flipchat.link/pro/dafabet" class="whatsapp-btn wa-link" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="whatsapp.gif" alt="WhatsApp" class="whatsapp-gif">
+                    <span>ORDER NOW ON WHATSAPP</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         3. SPECIALTIES & MENU SECTION (CLEAN, LESS CONTENT, HUMAN)
+         ======================================================== -->
+    <section class="our-services-section" id="services">
+        <div class="container">
+            <div class="services-header">
+                <span class="services-pill">🔥 POPULAR MENU & SPECIALS</span>
+                <h2 class="services-title">Explore Our <span>Specialties & Bites</span></h2>
+                <p class="services-subtitle">
+                    Made fresh to order, packed hot, and delivered straight to your door with signature taste.
+                </p>
+            </div>
+
+            <div class="our-services-grid">
+                <!-- Item 1 -->
+                <div class="service-box">
+                    <div class="service-box-header">
+                        <div class="service-icon-box">🍔</div>
+                        <span class="service-badge badge-hot">Bestseller</span>
+                    </div>
+                    <h3>Burgers & Wraps</h3>
+                    <p>Juicy patties, melted cheese, and fresh toasted brioche buns with special house sauce.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="service-box">
+                    <div class="service-box-header">
+                        <div class="service-icon-box">🍗</div>
+                        <span class="service-badge badge-hot">Extra Crispy</span>
+                    </div>
+                    <h3>Fried Chicken & Wings</h3>
+                    <p>Golden crunchy tenders, spicy tossed wings, and garlic mayo dips made fresh daily.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="service-box">
+                    <div class="service-box-header">
+                        <div class="service-icon-box">🍟</div>
+                        <span class="service-badge badge-gold">Must Try</span>
+                    </div>
+                    <h3>Loaded Cheesy Fries</h3>
+                    <p>Crispy hot fries drenched in melted cheese sauce, peri-peri seasoning & jalapenos.</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="service-box">
+                    <div class="service-box-header">
+                        <div class="service-icon-box">🍕</div>
+                        <span class="service-badge badge-gold">Fresh Baked</span>
+                    </div>
+                    <h3>Pizzas & Frankies</h3>
+                    <p>Thin-crust pizzas loaded with real mozzarella and warm flaky spiced rolls.</p>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="service-box">
+                    <div class="service-box-header">
+                        <div class="service-icon-box">🥤</div>
+                        <span class="service-badge badge-green">Chilled</span>
+                    </div>
+                    <h3>Thick Shakes & Coolers</h3>
+                    <p>Chocolate, KitKat & Oreo thick shakes, iced mint coolers, and cold beverages.</p>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="service-box">
+                    <div class="service-box-header">
+                        <div class="service-icon-box">🌙</div>
+                        <span class="service-badge badge-green">Till 3:00 AM</span>
+                    </div>
+                    <h3>Late Night & Combos</h3>
+                    <p>Late night food cravings? Pocket-friendly meal combos delivered hot till 3 AM.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         4. FAQ SECTION
+         ======================================================== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="faq-header">
+                <span class="faq-pill">GOT QUESTIONS?</span>
+                <h2 class="faq-title">Frequently Asked <span>Questions</span></h2>
+            </div>
+
+            <div class="faq-wrap">
+                <!-- Q1 -->
+                <div class="faq-item active">
+                    <button class="faq-question" type="button" aria-expanded="true">
+                        <span>How does Big X Food House take orders and deliver service?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        We provide instant reply ordering via WhatsApp, fast fulfillment, delicious food experiences,
+                        and dedicated support for Meta &
+                        Google Ads, automated direct-to-WhatsApp onboarding, verified community ID platforms, and 24/7
+                        client management to scale your revenue.
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>How fast can my landing page or campaign go live?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Our ready-to-deploy landing pages and ad frameworks can be set up and launched in as fast as 24
+                        to 48 hours, fully optimized for mobile responsiveness and ad network compliance.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Can I get a custom landing page for my specific brand or offer?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes! Every business has unique goals. Tap the "Contact for Landing Page" button to chat with our
+                        team on Telegram or WhatsApp and get a custom-designed page tailored to your branding.
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>How do I get in touch for custom business services?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        You can reach us directly via the floating WhatsApp button on this page or through our official
+                        Telegram desk. Our team responds within minutes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         5. FOOTER (INCLUDES THE LANDING SERVICES BLOCK & FOOTER BAR)
+         ======================================================== -->
+    <footer class="site-footer" id="footer">
+        <!-- TOP CTA BLOCK INSIDE FOOTER (MATCHING USER SCREENSHOT) -->
+        <div class="footer-cta-block">
+            <div class="container">
+                <div class="services-heading-wrap">
+                    <h2 class="services-main-title">Website & Landing Page Services</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="services-featured-card">
+                    <div class="service-pill-tag">
+                        <span>🔥</span> CONTACT FOR LANDING PAGE & WEBSITE
+                    </div>
+                    <p class="service-card-text">
+                        I make clean, modern and high-converting responsive websites and landing pages for
+                        <strong>GOOGLE ADS & META ADS</strong> to grow your businesses and brands.
+                    </p>
+                    <a href="https://t.me/AD_MEDIA_2026" class="telegram-yellow-btn tg-link" id="footerTgBtn"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="telegram.gif" alt="Telegram" class="telegram-icon-img">
+                        <span>CONTACT FOR LANDING PAGE</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM FOOTER BAR (MATCHING SCREENSHOT) -->
+        <div class="footer-bottom-bar">
+            <div class="footer-container">
+                <!-- Left Branding -->
+                <div class="footer-left">
+                    <div class="footer-logo">BIG X FOOD HOUSE</div>
+                    <div class="footer-tagline">INNOVATING YOUR WORLD</div>
+                    <div class="footer-copy">© 2026 Big X Food House. All Rights Reserved.</div>
+                </div>
+
+                <!-- Right Navigation -->
+                <div class="footer-right">
+                    <ul class="footer-nav">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="privacy-policy.html" onclick="openModal('privacyModal'); return false;">Privacy
+                                Policy</a></li>
+                        <li><a href="terms-conditions.html" onclick="openModal('termsModal'); return false;">Terms &
+                                Conditions</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- FLOATING WHATSAPP BUTTON (MATCHING SCREENSHOT CORNER BUTTON) -->
+    <a href="https://admin.flipchat.link/pro/dafabet" class="floating-wa-btn wa-link" target="_blank"
+        rel="noopener noreferrer" title="Chat on WhatsApp">
+        <img src="whatsapp.gif" alt="WhatsApp" class="floating-wa-img">
+    </a>
+
+
+    <!-- ========================================================
+         MODALS (PRIVACY POLICY, TERMS & CONDITIONS, CONTACT)
+         ======================================================== -->
+    <!-- Privacy Policy Modal -->
+    <div class="modal-overlay" id="privacyModal" onclick="closeModalOnOverlay(event, 'privacyModal')">
+        <div class="modal-box modal-large">
+            <button class="modal-close" onclick="closeModal('privacyModal')" aria-label="Close modal">&times;</button>
+            <div class="modal-header-wrap">
+                <span class="modal-badge">Official Policy</span>
+                <h3>Privacy Policy</h3>
+                <div class="modal-meta-info">Last Updated: October 2026 • Big X Food House Multi-Business Growth &
+                    Marketing Network</div>
+            </div>
+
+            <div class="modal-body-content">
+                <div class="modal-callout">
+                    <strong>Scope & Overview:</strong> Big X Food House ("we", "our", or "us") operates a comprehensive
+                    multi-business digital ecosystem providing high-converting landing pages, Meta & Google Ads
+                    performance marketing, automated WhatsApp CRM systems, and community growth infrastructure. This
+                    Privacy Policy details how we collect, process, safeguard, and manage personal and commercial data
+                    across all our digital assets, campaigns, and affiliated ventures.
+                </div>
+
+                <h4><span class="sec-num">1.</span> Information We Collect</h4>
+                <p>To provide high-performance marketing and scalable business solutions, we collect information across
+                    three distinct categories:</p>
+                <ul>
+                    <li><strong>Directly Provided Information:</strong> Full name, WhatsApp phone number, email address,
+                        company/brand name, project specifications, and inquiry messages submitted via our landing
+                        pages, contact forms, or direct messaging channels.</li>
+                    <li><strong>Automated Technical & Device Data:</strong> IP addresses, browser type, device
+                        identifiers, operating system version, referring URLs, access timestamps, and approximate
+                        geolocation derived through standard server logs.</li>
+                    <li><strong>Advertising & Performance Analytics:</strong> Click-through actions, interaction events,
+                        conversion checkpoints, and lead status metrics captured during active campaign funnels to
+                        monitor ad efficiency.</li>
+                </ul>
+
+                <h4><span class="sec-num">2.</span> How We Use Your Data Across Multiple Businesses</h4>
+                <p>We process your data strictly for legitimate commercial operations and high-converting marketing
+                    fulfillment, including:</p>
+                <ul>
+                    <li>Designing, deploying, and optimizing custom landing pages tailored for Google Ads and Meta Ads
+                        campaigns.</li>
+                    <li>Connecting you seamlessly with our 24/7 client support desks via official WhatsApp and Telegram
+                        channels.</li>
+                    <li>Auditing, tracking, and scaling multi-channel paid ad campaigns to improve Return on Ad Spend
+                        (ROAS).</li>
+                    <li>Facilitating verified community onboarding, member support, and technical automation workflows.
+                    </li>
+                    <li>Monitoring traffic quality, mitigating invalid ad clicks, and protecting our advertising
+                        networks.</li>
+                    <li>Delivering project milestones, critical security updates, and relevant business scaling
+                        opportunities.</li>
+                </ul>
+
+                <h4><span class="sec-num">3.</span> Multi-Brand & Client Data Segregation</h4>
+                <p>As an agency and ecosystem supporting multiple business verticals, e-commerce stores, and community
+                    channels, <strong>we maintain strict cross-brand data confidentiality.</strong> We never pool,
+                    cross-target, or disclose proprietary customer data, lead lists, or campaign metrics between
+                    independent clients or competing ventures. Each client's data remains strictly segregated and
+                    protected.</p>
+
+                <h4><span class="sec-num">4.</span> Cookies, Tracking Pixels & Marketing Tags</h4>
+                <p>We implement industry-standard tracking technologies to gauge marketing engagement and optimize
+                    campaign delivery:</p>
+                <ul>
+                    <li><strong>Essential & Performance Cookies:</strong> Necessary for smooth navigation, fast loading
+                        times, and responsive rendering across mobile and desktop devices.</li>
+                    <li><strong>Meta Pixel & Conversions API:</strong> Used to track conversion actions originating from
+                        Facebook and Instagram ads, preventing ad fatigue and refining audience targeting.</li>
+                    <li><strong>Google Analytics & Tag Manager:</strong> Analyzes user behavior, bounce rates, and
+                        navigation pathways to enhance landing page speed and user experience.</li>
+                </ul>
+                <p>You can configure your browser to reject cookies or notify you when cookies are sent. Disabling
+                    cookies will not prevent you from contacting our team or using our services.</p>
+
+                <h4><span class="sec-num">5.</span> Data Sharing & Third-Party Service Providers</h4>
+                <p>We respect your trust. <strong>We do not sell, rent, monetize, or trade your personal information
+                        with third parties.</strong> Data is shared only under strict operational conditions:</p>
+                <ul>
+                    <li><strong>Authorized Infrastructure Partners:</strong> Cloud hosting providers, secure data
+                        repositories, and communication APIs (WhatsApp Business Platform, Telegram API).</li>
+                    <li><strong>Advertising Networks:</strong> Aggregated, hashed event telemetry shared with Meta and
+                        Google in compliance with their developer security protocols.</li>
+                    <li><strong>Legal & Regulatory Compliance:</strong> Where required by law, court order, or
+                        governmental authorities to protect legal rights, property, and user safety.</li>
+                </ul>
+
+                <h4><span class="sec-num">6.</span> Data Security & Encryption</h4>
+                <p>We employ multi-layered security measures, including 256-bit SSL/TLS encryption for all data in
+                    transit, firewall architecture, restricted role-based administrative access, and proactive threat
+                    monitoring. While no digital system can guarantee 100% immunity, we adhere to recognized commercial
+                    standards to protect all stored information.</p>
+
+                <h4><span class="sec-num">7.</span> Data Retention & Your Privacy Rights</h4>
+                <p>We retain your contact records only as long as necessary to fulfill active business projects,
+                    maintain accounting records, and satisfy legal obligations. Depending on your jurisdiction, you have
+                    the right to:</p>
+                <ul>
+                    <li>Request confirmation and access to personal data held about you.</li>
+                    <li>Request immediate correction of inaccurate or outdated contact details.</li>
+                    <li>Request permanent deletion of your contact records ("Right to Erasure"), subject to statutory
+                        record-keeping requirements.</li>
+                    <li>Opt-out of promotional communications at any time by messaging our desk.</li>
+                </ul>
+
+                <h4><span class="sec-num">8.</span> Third-Party Platform Disclaimers</h4>
+                <div class="modal-callout warning">
+                    <strong>Independent Agency Notice:</strong> Big X Food House is an independent marketing, funnel
+                    architecture, and community growth provider. Meta®, Facebook®, Instagram®, Google®, WhatsApp®, and
+                    Telegram® are registered trademarks of their respective corporations. Big X Food House is not
+                    affiliated with, endorsed by, or formally associated with these platforms.
+                </div>
+
+                <h4><span class="sec-num">9.</span> Policy Modifications & Contact</h4>
+                <p>We may update this Privacy Policy periodically to accommodate new multi-business capabilities,
+                    regulatory updates, or ad platform terms. Revised policies become effective upon posting.</p>
+                <p>For privacy inquiries, data deletion requests, or compliance questions, please contact our
+                    administrative desk at <a href="mailto:support@bigxfoodhouses.shop"
+                        style="color: var(--gold-primary); text-decoration: underline;">support@bigxfoodhouses.shop</a>.
+                </p>
+            </div>
+
+            <div class="modal-footer-cta">
+                <a href="privacy-policy.html" target="_blank" class="modal-external-link">Open Standalone Privacy Page
+                    ↗</a>
+                <button class="modal-close-btn" onclick="closeModal('privacyModal')"
+                    style="padding: 8px 18px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: #fff; cursor: pointer; font-size: 13px;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div class="modal-overlay" id="termsModal" onclick="closeModalOnOverlay(event, 'termsModal')">
+        <div class="modal-box modal-large">
+            <button class="modal-close" onclick="closeModal('termsModal')" aria-label="Close modal">&times;</button>
+            <div class="modal-header-wrap">
+                <span class="modal-badge">User Agreement</span>
+                <h3>Terms & Conditions</h3>
+                <div class="modal-meta-info">Last Updated: October 2026 • Big X Food House Multi-Business Growth Network
+                </div>
+            </div>
+
+            <div class="modal-body-content">
+                <div class="modal-callout">
+                    <strong>Important Commercial Agreement:</strong> Please review these Terms & Conditions thoroughly.
+                    By accessing Big X Food House's website, ordering landing page services, initiating ad campaigns, or
+                    interacting with our WhatsApp and Telegram desks, you confirm your acceptance of and agreement to be
+                    bound by these Terms.
+                </div>
+
+                <h4><span class="sec-num">1.</span> Acceptance & Multi-Business Eligibility</h4>
+                <p>These terms govern all services, digital assets, consultations, and community platforms operated by
+                    Big X Food House ("Big X Food House", "we", "us", or "our"):</p>
+                <ul>
+                    <li>You must be at least 18 years old or possess legal authority to represent your commercial
+                        entity.</li>
+                    <li>You agree to provide authentic, verifiable business information and contact details.</li>
+                    <li>These terms govern all current and future business verticals, subsidiary brands, and ad funnels
+                        powered under the Big X Food House umbrella.</li>
+                </ul>
+
+                <h4><span class="sec-num">2.</span> Scope of Services & Digital Deliverables</h4>
+                <p>Big X Food House provides end-to-end digital infrastructure to scale multiple businesses and brands:
+                </p>
+                <ul>
+                    <li><strong>Landing Page & Web Architecture:</strong> Custom, ultra-fast, mobile-responsive landing
+                        pages built specifically for Meta Ads, Google Ads, and high conversion velocity.</li>
+                    <li><strong>Paid Advertising Funnels:</strong> Campaign strategy, creative design, copywriting,
+                        audience targeting, and optimization across Meta (Facebook & Instagram) and Google
+                        Search/Display networks.</li>
+                    <li><strong>WhatsApp CRM & Automated Lead Flow:</strong> Direct click-to-chat onboarding, automated
+                        greeting logic, and real-time lead distribution.</li>
+                    <li><strong>Community Scaling Infrastructure:</strong> Telegram and WhatsApp channel frameworks,
+                        retention funnels, and verified 24/7 support platforms.</li>
+                </ul>
+
+                <h4><span class="sec-num">3.</span> Client Responsibilities & Ad Policy Compliance</h4>
+                <p>To ensure high standards and ad network compliance across all business ventures, clients agree to the
+                    following:</p>
+                <ul>
+                    <li>You are solely responsible for ensuring your advertised products, services, offers, and business
+                        practices comply with all local, national, and international laws.</li>
+                    <li>All materials, logos, images, and content provided to Big X Food House must be legally owned by
+                        you or appropriately licensed without infringing on any third-party intellectual property.</li>
+                    <li>You must strictly adhere to the advertising policies of Meta Platforms Inc. and Google LLC. We
+                        do not service deceptive, fraudulent, illegal, or prohibited business categories.</li>
+                    <li>Big X Food House reserves the absolute right to refuse or immediately terminate services for any
+                        campaign that violates advertising standards or ethical business practices.</li>
+                </ul>
+
+                <h4><span class="sec-num">4.</span> Performance Disclaimers & Realistic Expectations</h4>
+                <div class="modal-callout warning">
+                    <strong>No Guaranteed Financial Outcomes:</strong> While Big X Food House implements battle-tested
+                    marketing frameworks, conversion-optimized landing pages, and advanced targeting methodologies,
+                    digital advertising outcomes depend on multiple external variables outside our control. These
+                    include market demand, consumer perception, your offer pricing, fulfillment speed, and market
+                    competition. Big X Food House does NOT guarantee specific revenue figures, earnings, or guaranteed
+                    ROAS percentages. Past performance case studies represent illustrative benchmarks, not guarantees.
+                </div>
+
+                <h4><span class="sec-num">5.</span> Third-Party Ad Networks & Platform Autonomy</h4>
+                <p>Big X Food House operates as an independent technical and creative consulting agency. As such:</p>
+                <ul>
+                    <li>Meta, Google, WhatsApp, and Telegram operate autonomously under their respective terms and
+                        algorithms.</li>
+                    <li>Ad account verifications, billing reviews, ad approvals, and algorithmic traffic distribution
+                        are solely determined by the respective platforms.</li>
+                    <li>Big X Food House is not liable for account suspensions, review delays, algorithm updates, or
+                        policy enforcement actions enacted by third-party ad networks.</li>
+                </ul>
+
+                <h4><span class="sec-num">6.</span> Fees, Milestone Payments & Refund Policy</h4>
+                <p>We adhere to transparent commercial billing terms:</p>
+                <ul>
+                    <li><strong>Service Retainers vs. Advertising Spend:</strong> Fees paid to Big X Food House cover
+                        custom design, engineering, copywriting, setup, and consulting labor. Advertising budgets (ad
+                        spend) are billed directly by Meta or Google to the client's own payment methods.</li>
+                    <li><strong>Payment Milestones:</strong> Development projects require agreed advance retainers or
+                        milestone payments prior to live server deployment or source code handover.</li>
+                    <li><strong>Non-Refundable Policy on Digital Labor:</strong> Because landing page development,
+                        creative assets, and marketing configurations represent immediate custom labor and proprietary
+                        digital intellectual property, all fees paid for completed milestones, live landing pages, and
+                        advisory hours are strictly non-refundable once work has commenced.</li>
+                </ul>
+
+                <h4><span class="sec-num">7.</span> Intellectual Property & Usage Licenses</h4>
+                <p>Intellectual property rights are structured fairly:</p>
+                <ul>
+                    <li><strong>Client Property:</strong> You retain complete ownership of your pre-existing trademarks,
+                        trade names, customer databases, and proprietary brand materials.</li>
+                    <li><strong>Delivered Landing Pages:</strong> Upon full settlement of all project invoices, you
+                        receive a perpetual, non-exclusive license to use the delivered landing page assets for your
+                        commercial operations.</li>
+                    <li><strong>Proprietary Agency Frameworks:</strong> Big X Food House retains all rights and title to
+                        our underlying design systems, code libraries, automation scripts, and proprietary campaign
+                        structures.</li>
+                    <li><strong>Portfolio Display:</strong> Big X Food House reserves the right to showcase
+                        non-confidential landing page designs, creatives, and anonymized growth metrics within our
+                        agency portfolio.</li>
+                </ul>
+
+                <h4><span class="sec-num">8.</span> Limitation of Liability & Indemnification</h4>
+                <p>To the fullest extent permitted by applicable law, Big X Food House, its founders, team members, and
+                    affiliates shall not be liable for any indirect, incidental, special, or consequential damages
+                    (including lost profits, loss of business reputation, or data interruptions) arising out of or
+                    related to our services or website.</p>
+                <p>You agree to indemnify, defend, and hold harmless Big X Food House against any third-party claims,
+                    liabilities, damages, and legal costs arising from your business products, customer fulfillment, or
+                    violations of these Terms.</p>
+
+                <h4><span class="sec-num">9.</span> Termination & Service Suspension</h4>
+                <p>Either party may terminate ongoing retainer or advisory arrangements upon written notice as
+                    stipulated in individual service agreements. Big X Food House reserves the right to immediately
+                    suspend or revoke managed hosting or technical support in the event of non-payment, chargebacks,
+                    abusive behavior, or verified fraudulent activity.</p>
+
+                <h4><span class="sec-num">10.</span> Governing Law & Official Support</h4>
+                <p>These Terms & Conditions shall be governed by and construed in accordance with the laws of India. Any
+                    legal dispute arising out of or relating to these Terms shall be resolved through good-faith
+                    negotiation, and if necessary, submitted to the competent courts of jurisdiction.</p>
+                <p>For questions, formal notices, or contract inquiries regarding these Terms, contact our official
+                    Big X Food House administrative desk at <a href="mailto:support@bigxfoodhouses.shop"
+                        style="color: var(--gold-primary); text-decoration: underline;">support@bigxfoodhouses.shop</a>.
+                </p>
+            </div>
+
+            <div class="modal-footer-cta">
+                <a href="terms-conditions.html" target="_blank" class="modal-external-link">Open Standalone Terms Page
+                    ↗</a>
+                <button class="modal-close-btn" onclick="closeModal('termsModal')"
+                    style="padding: 8px 18px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: #fff; cursor: pointer; font-size: 13px;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal" onclick="closeModalOnOverlay(event, 'contactModal')">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('contactModal')" aria-label="Close modal">&times;</button>
+            <div class="modal-header-wrap">
+                <span class="modal-badge">Dedicated Support</span>
+                <h3>Contact Big X Food House</h3>
+                <div class="modal-meta-info">Official Helpdesk & Inquiries</div>
+            </div>
+
+            <div class="modal-body-content">
+                <p>Have questions, feedback, or need assistance? Reach out to our official support team via email:</p>
+
+                <div
+                    style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 22px 18px; margin: 20px 0; text-align: center;">
+                    <div
+                        style="font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 8px;">
+                        ✉️ Official Support Email
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <a href="mailto:support@bigxfoodhouses.shop"
+                            style="font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--gold-primary); text-decoration: underline; word-break: break-all;">
+                            support@bigxfoodhouses.shop
+                        </a>
+                    </div>
+                    <div style="font-size: 13.5px; color: #cbd5e1; margin-top: 8px;">
+                        ⚡ <strong>Response Time:</strong> We usually reply within 24 hours.
+                    </div>
+                </div>
+
+                <p style="font-size: 13px; color: #94a3b8; text-align: center; margin-top: 15px;">
+                    Our team is here to assist you with any questions or support inquiries.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================================
+         SCRIPTS: ACCORDION, MODALS & DYNAMIC LINKS
+         ======================================================== -->
+    <script>
+        // ========================================================
+        // EASY CONFIGURATION: Enter your WhatsApp & Telegram details!
+        // ========================================================
+        const WHATSAPP_CONTACT = "https://admin.flipchat.link/pro/dafabet"; // Link provided by user
+        const TELEGRAM_LINK = "";    // E.g. "https://t.me/yourdeltachannel"
+        const DEFAULT_MESSAGE = "Hello Big X Food House, I want to grow my business with your landing page & ads services!";
+
+        // Apply WhatsApp links dynamically
+        if (WHATSAPP_CONTACT && WHATSAPP_CONTACT.trim() !== "") {
+            let finalWaUrl = "";
+            if (WHATSAPP_CONTACT.startsWith("http://") || WHATSAPP_CONTACT.startsWith("https://")) {
+                finalWaUrl = WHATSAPP_CONTACT;
+            } else {
+                const cleanNumber = WHATSAPP_CONTACT.replace(/\D/g, '');
+                finalWaUrl = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;
+            }
+            document.querySelectorAll('.wa-link').forEach(link => {
+                link.href = finalWaUrl;
+            });
+        }
+
+        // Apply Telegram links dynamically
+        if (TELEGRAM_LINK && TELEGRAM_LINK.trim() !== "") {
+            document.querySelectorAll('.tg-link').forEach(link => {
+                link.href = TELEGRAM_LINK;
+            });
+        }
+
+        // FAQ ACCORDION FUNCTIONALITY
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle clicked
+                if (!isActive) {
+                    item.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // MODAL HANDLERS
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) modal.classList.add('open');
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) modal.classList.remove('open');
+        }
+
+        function closeModalOnOverlay(e, id) {
+            if (e.target.id === id) {
+                closeModal(id);
+            }
+        }
+    </script>
+</body>
+
+</html>

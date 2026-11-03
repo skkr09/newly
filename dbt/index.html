@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#071f1d">
+    <meta name="description" content="Dm First Admin Panel private Android APK download.">
+    <title>Dafanews Admin Panel</title>
+    <link rel="icon" type="image/jpeg" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1650061496561203');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1650061496561203&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            --bg: #071f1d;
+            --panel: #0d3430;
+            --green: #32e67f;
+            --cyan: #22d8d0;
+            --gold: #f4c542;
+            --text: #ffffff;
+            --muted: #b9cbc7;
+            --line: rgba(255, 255, 255, .16);
+            --shadow: 0 24px 60px rgba(0, 0, 0, .35);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100dvh;
+            overflow-x: hidden;
+            padding: max(20px, env(safe-area-inset-top)) 14px max(20px, env(safe-area-inset-bottom));
+            background: radial-gradient(circle at 50% 8%, rgba(50, 230, 127, .18), transparent 34%),
+                        linear-gradient(180deg, #061816 0%, #082b28 54%, #061b19 100%);
+        }
+
+        main {
+            width: 100%;
+            max-width: 360px;
+            min-width: 0;
+        }
+
+        .panel {
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: radial-gradient(circle at 50% -8%, rgba(50, 230, 127, .14), transparent 38%),
+                        linear-gradient(180deg, rgba(18, 78, 70, .97), rgba(8, 45, 41, .97));
+            box-shadow: var(--shadow);
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+
+        .hero {
+            padding: 28px 22px 24px;
+        }
+
+        .logo {
+            width: 112px;
+            height: 112px;
+            margin: 0 auto 20px;
+            padding: 0;
+            border-radius: 26px;
+            background: #082c20;
+            overflow: hidden;
+            border: 2px solid rgba(244, 197, 66, 0.4);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, .4), 0 0 34px rgba(50, 230, 127, .25);
+            transition: transform 0.25s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.03);
+        }
+
+        .logo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+
+        h1 {
+            margin: 0;
+            max-width: 360px;
+            margin-inline: auto;
+            font-size: clamp(32px, 8.8vw, 42px);
+            line-height: 1.06;
+            letter-spacing: -0.5px;
+            font-weight: 900;
+        }
+
+        h1 span {
+            display: block;
+        }
+
+        h1 span:first-child {
+            background: linear-gradient(135deg, #fff 40%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sub {
+            margin: 10px auto 0;
+            max-width: 320px;
+            color: var(--muted);
+            font-size: 14.5px;
+            line-height: 1.45;
+            font-weight: 600;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            margin: 22px 0;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--line);
+        }
+
+        .info div {
+            min-width: 0;
+            padding: 13px 6px;
+            background: rgba(7, 31, 29, .55);
+        }
+
+        .info span {
+            display: block;
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }
+
+        .info b {
+            display: block;
+            margin-top: 7px;
+            font-size: 15px;
+            line-height: 1.1;
+            font-weight: 900;
+            white-space: nowrap;
+        }
+
+        .download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            min-height: 58px;
+            border-radius: 18px;
+            color: #042723;
+            background: linear-gradient(100deg, var(--green), var(--cyan));
+            box-shadow: 0 16px 32px rgba(34, 216, 208, .28);
+            font-size: 18.5px;
+            font-weight: 900;
+            text-decoration: none;
+            transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+            cursor: pointer;
+        }
+
+        .download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 38px rgba(34, 216, 208, .4);
+            filter: brightness(1.05);
+        }
+
+        .download:active {
+            transform: translateY(1px);
+            box-shadow: 0 10px 20px rgba(34, 216, 208, .2);
+        }
+
+        .download svg {
+            flex-shrink: 0;
+        }
+
+        .hint {
+            margin: 13px 0 0;
+            color: rgba(255, 255, 255, .72);
+            font-size: 13px;
+            line-height: 1.35;
+            font-weight: 600;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 14px 12px;
+            border-top: 1px solid var(--line);
+            background: rgba(7, 31, 29, .35);
+            font-size: 12.5px;
+        }
+
+        .links a {
+            color: var(--muted);
+            text-decoration: none;
+            cursor: pointer;
+            transition: color .2s ease;
+        }
+
+        .links a:hover {
+            color: var(--text);
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 16px 8px 0;
+            color: rgba(185, 203, 199, .78);
+            font-size: 12px;
+            line-height: 1.45;
+            text-align: center;
+        }
+
+        /* Modal Dialog */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(6px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: #0d3430;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            max-width: 440px;
+            width: 100%;
+            box-shadow: var(--shadow);
+            color: var(--text);
+            text-align: left;
+        }
+
+        .modal h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: var(--green);
+        }
+
+        .modal p {
+            color: var(--muted);
+            font-size: 13.5px;
+            line-height: 1.5;
+        }
+
+        .modal-close {
+            margin-top: 18px;
+            display: inline-block;
+            background: linear-gradient(100deg, var(--green), var(--cyan));
+            color: #042723;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 14px;
+            cursor: pointer;
+            float: right;
+        }
+
+        @media (min-width: 700px) {
+            main {
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 350px) {
+            body {
+                padding-inline: 12px;
+            }
+            .hero {
+                padding: 22px 16px 20px;
+            }
+            .logo {
+                width: 96px;
+                height: 96px;
+                margin-bottom: 16px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            .info div {
+                padding-inline: 4px;
+            }
+            .download {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="panel" aria-labelledby="page-title">
+            <div class="hero">
+                <div class="logo">
+                    <img decoding="async" src="logo.png" alt="Dm First Logo">
+                </div>
+
+                <h1 id="page-title"><span>Dafanews</span><span>Admin Panel</span></h1>
+                <p class="sub">Private Android app access for registered members.</p>
+
+                <div class="info" aria-label="App details">
+                    <div>
+                        <span>VERSION</span>
+                        <b>1.0.5</b>
+                    </div>
+                    <div>
+                        <span>SIZE</span>
+                        <b>1.4 MB</b>
+                    </div>
+                    <div>
+                        <span>TYPE</span>
+                        <b>APK</b>
+                    </div>
+                </div>
+
+                <a class="download" data-download href="https://admin.flipchat.link/pro/dafabet">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Download APK</span>
+                </a>
+                <p class="hint">Download, install, then register inside the app.</p>
+            </div>
+
+            <nav class="links" aria-label="Legal links">
+                <a href="#privacy" onclick="openModal('privacy'); return false;">Privacy</a>
+                <a href="#terms" onclick="openModal('terms'); return false;">Terms</a>
+            </nav>
+        </section>
+
+        <footer>
+            18+ only. Private access only. Follow applicable local rules.
+        </footer>
+    </main>
+
+    <!-- Modal for Privacy & Terms -->
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <h2 id="modalTitle">Privacy Policy</h2>
+            <div id="modalContent">
+                <p>All data and access credentials are kept strictly private and confidential. Use of this application is reserved exclusively for registered authorized members.</p>
+            </div>
+            <button class="modal-close" onclick="closeModal()">Close</button>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+
+    <script>
+        const download = document.querySelector("[data-download]");
+        const params = new URLSearchParams(window.location.search);
+        params.delete("v");
+
+        // Forward UTM and tracking parameters to the download link
+        if (download && params.toString()) {
+            try {
+                const targetUrl = new URL(download.href, window.location.href);
+                params.forEach((val, key) => targetUrl.searchParams.set(key, val));
+                download.href = targetUrl.toString();
+            } catch (err) {
+                download.href += (download.href.includes("?") ? "&" : "?") + params.toString();
+            }
+        }
+
+        // Track download button clicks in Meta Pixel
+        if (download) {
+            download.addEventListener("click", () => {
+                if (typeof fbq === "function") {
+                    fbq("track", "Lead");
+                }
+            });
+        }
+
+        // Modal Handler
+        function openModal(type) {
+            const overlay = document.getElementById('modalOverlay');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+            if (type === 'privacy') {
+                title.textContent = 'Privacy Policy';
+                content.innerHTML = '<p>Your privacy is important to us. All user data and access details within Dafanews Admin Panel are kept secure and encrypted. We do not sell or share personal information with unauthorized third parties.</p>';
+            } else {
+                title.textContent = 'Terms of Service';
+                content.innerHTML = '<p>By downloading and using Dafanews Admin Panel, you confirm that you are at least 18 years of age and agree to comply with all applicable local regulations and terms of private access.</p>';
+            }
+            overlay.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
